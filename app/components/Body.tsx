@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import Icon from "../assets/icons/gym.png";
 
-const Body = ({item, bodyPart, setBodyPart}) => {
+const Body = ({item, bodyPart, setBodyPart} : Props) => {
   return (
     <Stack
       type="button"
@@ -20,7 +20,9 @@ const Body = ({item, bodyPart, setBodyPart}) => {
       }}
     >
       <Image src={ Icon } alt="Dumbbell" style={{width: '40px', height: '40px'}} />
-      test
+      <Typography fontSize='25px' fontWeight='bold' fontFamily='Alegreya' color='#3A1212' textTransform='capitalize'>
+        {item}
+      </Typography>
     </Stack>
   )
 }
