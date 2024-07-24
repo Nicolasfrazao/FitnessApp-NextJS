@@ -11,12 +11,21 @@ const Navbar = () => {
   return (
     <Stack direction="row" justifyContent="space-around" sx={{ gap: { sm: '123px', xs: '40px' }, mt: { sm: '32px', xs: '20px' }, justifyContent: 'none' }} px="20px">
       <Link href="/">
-        <Image src={Logo} alt="Logo" width={48} height={48} className='mt-0 ml-5' />
+        <Image src={Logo} alt="Logo" style={{width: '50px', height: '50px', margin: '0px 20px'}} />
       </Link>
-      <Stack>
+      <Stack
+        direction="row"
+        gap="40px"
+        fontFamily="Alegreya"
+        fontSize="25px"
+        alignItems="flex-end"
+      >
         <Link href="/" style={{textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625'}}> 
-            Home
+          Home
         </Link>
+        <a href="#exercises" style={{textDecoration: 'none', color: '#3A1212'}}>
+          Exercises
+        </a>
       </Stack>
     </Stack>
   )
