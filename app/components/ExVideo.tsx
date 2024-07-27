@@ -1,5 +1,5 @@
 import { Typography, Box, Stack } from "@mui/material";
-import { Loader } from "./Loader";
+import Loader from "./Loader";
 import Image from "next/image";
 
 const ExerciseVideos = ( { exerciseVideos, name } : any) =>
@@ -35,3 +35,5 @@ const ExerciseVideos = ( { exerciseVideos, name } : any) =>
     </Box>
   );
 };
+
+export default ExerciseVideos;

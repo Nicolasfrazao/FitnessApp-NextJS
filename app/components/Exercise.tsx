@@ -4,9 +4,9 @@ import { Box, Stack, Typography } from "@mui/material";
 
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExerciseCard from "./ExCard";
-import { Loader } from "./Loader";
+import Loader from "./Loader";
 
-export const Exercises = ( { exercises, setExercises, bodyPart } ) =>
+const Exercises = ( { exercises, setExercises, bodyPart } ) =>
 {
   const [ currentPage, setCurrentPage ] = useState( 1 );
   const [ exercisesPerPage ] = useState( 6 );
@@ -31,7 +31,7 @@ export const Exercises = ( { exercises, setExercises, bodyPart } ) =>
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
   const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
 
-  const paginate = (event, value) => {
+  const paginate = (event : any, value : any) => {
     setCurrentPage(value);
 
     window.scrollTo({ top: 1800, behavior: 'smooth' });
@@ -63,3 +63,5 @@ export const Exercises = ( { exercises, setExercises, bodyPart } ) =>
     </Box>
   );
 };
+
+export default Exercises;
